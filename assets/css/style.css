@@ -25,19 +25,13 @@ body {
   border-radius: 15px;
 }
 
-/* .row {
-  white-space: pre-wrap;
-  height: 80px;
-  border-top: 1px solid white;;
-} */
-
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
-/* .past {
+.past {
   background-color: #d3d3d3;
   color: white;
 }
@@ -50,7 +44,7 @@ body {
 .future {
   background-color: #77dd77;
   color: white;
-} */
+}
 
 .save-button {
   border-left: 1px solid black;
