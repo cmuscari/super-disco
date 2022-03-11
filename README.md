@@ -7,3 +7,4 @@ This application is a work day scheduler tool for employees to use.  It lists th
 ![image](https://user-images.githubusercontent.com/97492722/157800971-66f48b65-1280-43bf-b803-4382b3f95245.png)
 
 ## Link to Depoloyed Application
+https://cmuscari.github.io/super-disco/
