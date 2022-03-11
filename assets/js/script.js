@@ -1,7 +1,6 @@
 // Global variables
 var currentDayEl = document.querySelector("#currentDay");
-var saveButton = document.querySelector(".save-button");
-var tasks = [];
+
 
 
 
@@ -10,7 +9,8 @@ currentDayEl.textContent = moment().format('dddd, MMMM Do YYYY');
 
 
 // Create new variable for the current hour (military time)
-var currentHour = parseInt(moment().format('H'));
+// var currentHour = +(moment().format('H'));
+var currentHour = 13;
 
 
 // Create new variables & values for the scheduler hour blocks to compare to the current time variable
@@ -149,14 +149,31 @@ else if (currentHour <= hour5.value) {
 
 
 
-// Save Tasks Function
-var saveTasks = function() {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-}
 
 
 
 
 // Save tasks to local storage when Save Buttons are clicked
-saveButton.addEventListener("click", saveTasks);
+let saveButtons = document.getElementsByClassName("save-button");
+
+for (var i = 0; i < saveButtons.length; i++) {
+    saveButtons[i].addEventListener("click", function(event) {
+        event.preventDefault();
+        let textArea = event.target.previousElementSibling.firstElementChild;
+        localStorage.setItem(textArea.id, JSON.stringify(textArea.value));
+    });
+}
+
+
+
+
+
+// Retrieve saved tasks from local storage
+let rows = document.getElementsByClassName('description');
+
+for(i=0;i<rows.length;i++){
+    let label = rows[i].id;
+    rows[i].value = JSON.parse(localStorage.getItem(label)) || "";
+}
+
 
