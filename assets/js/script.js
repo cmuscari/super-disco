@@ -9,8 +9,7 @@ currentDayEl.textContent = moment().format('dddd, MMMM Do YYYY');
 
 
 // Create new variable for the current hour (military time)
-// var currentHour = +(moment().format('H'));
-var currentHour = 13;
+var currentHour = +(moment().format('H'));
 
 
 // Create new variables & values for the scheduler hour blocks to compare to the current time variable
